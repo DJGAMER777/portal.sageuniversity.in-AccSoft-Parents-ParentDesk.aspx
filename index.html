@@ -30,6 +30,12 @@
         href="https://portal.sageuniversity.in/AccSoft/WebResource.axd?d=2-n_peZQztht5DE5EmjbruEKFgTZJB3SXF1Fla41EgIRVbqXUMVxpGHAGZ2ej-AUHl4Pm8dwSR0ixuUeZ5XJC9sfiikB0iUrk3loQ_3HWcZ5heoN48RhXDerTEfhcazZ55gjCywvtbVm6IoiAFdmWQ2&amp;t=634570501180000000"
         type="text/css" rel="stylesheet">
 </head>
+      <style>
+    .dropdown-divider {
+      display: block;
+    }
+  </style>
+
 
 <body id="page-top">
     <form>
@@ -1089,5 +1095,21 @@
         </div>
     </form>
 </body>
-
+<script>
+      const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', function () {
+        // Get the next divider element
+        const nextDivider = this.nextElementSibling;
+        if (nextDivider && nextDivider.classList.contains('dropdown-divider')) {
+          // Toggle the divider visibility
+          if (nextDivider.style.display === 'none') {
+            nextDivider.style.display = 'block';  // Show the divider
+          } else {
+            nextDivider.style.display = 'none';   // Hide the divider
+          }
+        }
+      });
+    });
+</script>
 </html>
